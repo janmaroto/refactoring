@@ -5,18 +5,12 @@ import java.util.Date;
 public class Lloguer {
 	private Date data;
 	private int dies;
-	private ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
-	
-	public Lloguer(Date data, int dies, ArrayList<Vehicle> vehicles) {
-		this.data = data;
-		this.dies = dies;
-		this.vehicles = vehicles;
-	}
+	private Vehicle vehicle;
 	
 	public Lloguer(Date date, int i, Vehicle vehicleBasic) {
 		this.data = date;
-		this.dies = dies;
-		this.vehicles.add();
+		this.dies = i;
+		this.vehicle = vehicleBasic;
 	}
 	public Date getData() {
 		return data;
@@ -30,12 +24,14 @@ public class Lloguer {
 	public void setDies(int dies) {
 		this.dies = dies;
 	}
-	public ArrayList<Vehicle> getVehicles() {
-		return vehicles;
+	public Vehicle getVehicle() {
+		return this.vehicle;
 	}
-	public void setVehicles(ArrayList<Vehicle> vehicles) {
-		this.vehicles = vehicles;
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
 	}
+	
+	
 	
 	
 	
