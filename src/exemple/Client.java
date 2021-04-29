@@ -45,24 +45,35 @@ public class Client {
             getNom() +
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
+        	
+        	bonificacions ++;
+        	bonificacions += bonificacionsDeLloguer(lloguer);
+        	
+        	
+        	resultat += "\t" +
+        	lloguer.getVehicle().getMarca() +
+        	" " +
+        	lloguer.getVehicle().getModel() + "; " +
+        		(lloguer.quantitat() * 30) + "€" + "\n";
+        	total += lloguer.quantitat() * 30;
             double quantitat = 0;
-            switch (lloguer.getVehicle().getCategoria()) {
-                case Vehicle.BASIC:
-                    quantitat += 3;
-                    if (lloguer.getDies() > 3) {
-                        quantitat += (lloguer.getDies() - 3) * 1.5;
-                    }
-                    break;
-                case Vehicle.GENERAL:
-                    quantitat += 4;
-                    if (lloguer.getDies() > 2) {
-                        quantitat += (lloguer.getDies() - 2) * 2.5;
-                    }
-                    break;
-                case Vehicle.LUXE:
-                    quantitat += lloguer.getDies() * 6;
-                    break;
-            }
+//            switch (lloguer.getVehicle().getCategoria()) {
+//                case Vehicle.BASIC:
+//                    quantitat += 3;
+//                    if (lloguer.getDies() > 3) {
+//                        quantitat += (lloguer.getDies() - 3) * 1.5;
+//                    }
+//                    break;
+//                case Vehicle.GENERAL:
+//                    quantitat += 4;
+//                    if (lloguer.getDies() > 2) {
+//                        quantitat += (lloguer.getDies() - 2) * 2.5;
+//                    }
+//                    break;
+//                case Vehicle.LUXE:
+//                    quantitat += lloguer.getDies() * 6;
+//                    break;
+//            }
 
             // afegeix lloguers freqüents
             bonificacions ++;

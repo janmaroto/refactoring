@@ -1,7 +1,7 @@
 package exemple;
 
 public class Vehicle {
-	public static final String BASIC = "BASIC";
+	public static final int BASIC = "BASIC";
 	public static final String GENERAL = "GENERAL";
 	public static final String LUXE = "LUXE";
 	private String marca;

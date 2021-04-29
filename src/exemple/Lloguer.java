@@ -30,7 +30,11 @@ public class Lloguer {
 	public void setVehicle(Vehicle vehicle) {
 		this.vehicle = vehicle;
 	}
-	
+	//MOVIMENT DE METODE DE CLIENT A LLOGUER
+	public double quantitat() {
+		double quantitat = 0;
+		swotch (this.)
+	}
 	
 	
 	
